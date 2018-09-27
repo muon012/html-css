@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Text Styling Concepts in CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            #text1 {
+                /* A value of capitalize makes each word start with a capital letter. */
+                /* 'uppercase' makes all letters capitalized; 'lowercase' does the opposite. */
+                text-transform: capitalize;
+            }
+
+            #text2 {
+                text-transform: uppercase;
+            }
+
+            #text3 {
+                text-decoration: underline;
+            }
+
+            #text4 {
+                text-decoration: overline;
+            }
+
+            #text5 {
+                text-decoration: line-through;
+            }
+
+            #text6 {
+                text-decoration-line: overline underline;
+            }
+
+            #text7 {
+                text-decoration-line: overline underline;
+                text-decoration-color: red;
+            }
+
+            #text8 {
+                text-decoration-line: overline underline;
+                text-decoration-style: dotted;
+            }
+
+            #text9 {
+                text-decoration-line: underline;
+                text-decoration-color: red;
+                text-decoration-style: wavy;
+            }
+
+            #text10 {
+                text-indent: 30px;
+            }
+
+            /* Adding a negative value for 'letter-spacing' will decrease the space between letters. */
+            #text11 {
+                letter-spacing: 10px;
+            }
+
+            #text12 {
+                letter-spacing: -3px;
+            }
+            .container {
+                display: grid;
+                grid: 100px / 300px;
+                justify-content: center;
+            }
+            /* The 'text-shadow' property has two position paremeters, first is the horizontal position
+            and then the vertical position. It can also be negative values.*/
+            /* The third parameter will be the blurr radius the shadow will have. */
+            /* You can use multiple shadows by using a comma to separate each group of parameters. */
+            #content1 {
+                text-shadow: 0px 7px 1px purple;
+            }
+            #content2 {
+                font-style: italic;
+                font-weight: bold;
+            }
+            #content3 {
+                word-spacing: 20px;
+                line-height: 10px;
+            }
+        </style>
+        <p id="text1">This text has a text-transform css property.</p>
+        <p id="text2">This text has a text-transform css property.</p>
+        <p id="text3">This text has been modified.</p>
+        <p id="text4">This text has been modified.</p>
+        <p id="text5">This text has been modified.</p>
+        <p id="text6">This text has been modified.</p>
+        <p id="text7">This text has been modified.</p>
+        <p id="text8">This text has been modified.</p>
+        <p id="text9">This text has been modified.</p>
+        <p id="text10">This text has been modified.This text has been modified.This text has been modified.This text
+            has been modified.This text has been modified.This text has been modified.This text has been modified.This
+            text has been modified.This text has been modified.This text has been modified.</p>
+        <p id="text11">This text has been modified.</p>
+        <p id="text12">This text has been modified.</p>
+
+        <div class="container">
+            <p id="content1">This is more text modified.</p>
+            <p id="content2">This is more text modified.</p>
+            <p id="content3">This is more text modified. <br>This is more text modified.</p>
+
+        </div>
+
+    </body>
+
+</html>

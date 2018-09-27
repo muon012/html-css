@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Forms</title>
+</head>
+<body>
+
+    <form action="">
+        Please Enter your name: &nbsp;<input type="text" name="" id="firstInput">
+        <br>
+        <input type="range">
+        <input type="checkbox">
+        <input type="radio">
+        <input type="file">
+        <input type="date">
+        <button type="reset">Reset Button</button>
+        <button type="button" onclick="func1()">Function Button</button>
+
+        <!-- "cols" in textarea tags mean the width of the element. -->
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <!-- Drop-down menu using the select tag; -->
+        <select name="" id="">
+            <option value="">Option 1</option>
+            <option value="" selected>I'm the default</option>
+            <option value="" disabled>You can't choose me</option>
+            <option value="">Option 4</option>
+        </select>
+
+    </form>
+    <script>
+        var func1 = function(){
+            var inputText = document.getElementById('firstInput').value;
+            alert(`Hi ${inputText}.`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Events in HTML</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            #grid1 {
+            display: grid;
+            justify-content: center;
+        }    
+        #grid2 {
+            display: grid;
+            grid-template: 100px / repeat(auto-fit, 100px);
+            justify-content: center;
+            align-items: center;
+            
+        } 
+        </style>
+
+        <!-- You can use the attributes "onkeydown, onkeyup, onkeypress" to trigger a function when the user presses a key. -->
+        <input type="text" onkeyup="keyDown()" id="input1">
+
+        <!-- On click events -->
+        <!-- Some attributes are: "mousedown, mouseover, and mousewheel" -->
+        <button onclick="click1()" id="clicky">Click</button>
+        <button onmousemove="click2()">hover over me</button>
+        <button onmouseout="click3()">Leave me alone!</button>
+
+        <!-- On drag events -->
+        <!-- Some values for this attribute are: "ondragstart, ondrag, ondragover" and so on. -->
+        <!-- Be careful with the ondrag attribute as it seems to trigger its value for a long time even after you stopped
+        dragging elements;probably due to the computer running the value of this attribute as long as you had the mouse
+        clicked. -->
+        <p draggable="true" ondragend="alert('I called the authorities. You are now a wanted person.')">Try to drag me,
+            I dare you.</p>
+        <br>
+        <div id="grid1">
+            <p>
+                Choose the text for the button.
+            </p>
+            <button ondragover="allowDrop(event)" ondrop="dropElement(event)" id="gridButton">Change me</button>
+        </div>
+
+        <div id="grid2">
+            <div id="option1" draggable="true" ondragstart="dragElement(event)">Option 1</div>
+            <div id="option2" draggable="true" ondragstart="dragElement(event)">Option 2</div>
+            <div id="option3" draggable="true" ondragstart="dragElement(event)">Option 3</div>
+        </div>
+
+        <!-- Clipboard events (paste, copy, cut) -->
+        <p oncopy="copyFunction()">Try to copy me!</p>
+        <form action="button">
+            <input onpaste="pasteFunction()" type="text" value="Paste something in me.">
+            <input oncut="cutFunction()" type="text" value="Delete me(Cmd + X).">
+        </form>
+
+
+        <script>
+            var keyDown = function () {
+                alert("You pressed a key inside the form.");
+            };
+
+            var click1 = function () {
+                alert("You clicked the button!");
+            };
+
+            var click2 = function () {
+                alert("Good job.");
+            };
+
+            var click3 = function () {
+                alert("Thank you for leaving me alone.");
+            };
+
+            // Dragging elements;
+            var allowDrop = function(e){
+                e.preventDefault();
+            };
+
+            var dragElement = function(e){
+                e.dataTransfer.setData("text", e.target.id);
+            };
+
+            var dropElement = function(e){
+                e.preventDefault();
+                var data = e.dataTransfer.getData("text");
+                e.target.appendChild(document.getElementById(data));
+            }
+
+            // Clipboard events;
+            var copyFunction = function(){
+                alert("Copyright infringement!!!!")
+            };
+            var pasteFunction = function(){
+                alert("You pasted something.")
+            };
+            var cutFunction = function(){
+                alert("I thougth we were friends, why did you delete me? I was joking.")
+            };
+
+
+
+        </script>
+    </body>
+
+</html>

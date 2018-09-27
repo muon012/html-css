@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Border Styling</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            #text1 {
+                border: 10px groove green;
+            }
+
+            #text2 {
+                border: 10px ridge yellow;
+            }
+
+            /* We can give 4 values to the 'border-radius' property too.  */
+            #text3 {
+                border: 3px solid red;
+                border-radius: 10px;
+            }
+
+            #text4 {
+                border-image-source: url("../icon.png");
+                border-width: 80px;
+                border-style: solid;
+            }
+
+            #text5 {
+                margin: 10px;
+                padding: 20px;
+                border-style: solid;
+                border-image-source: url("../icon.png");
+                border-image-width: 10px;
+                border-image-repeat: repeat;
+            }
+
+            /* The max/min width/height properties will take presedence when possible. If the element has a width of 500px,
+        but the min-width is 600px then the element will be resized to 600px. */
+            #text6 {
+                box-sizing: border-box;
+                background-color: yellow;
+                max-width: 300px;
+            }
+
+            /* 'box-shadow' parameters are x-value, y-value, blur, spread, color, inset, */
+            #text7 {
+                border: 2px solid brown;
+                box-shadow: 10px 8px 5px 2px purple inset,
+                    10px 8px 5px 2px blue;
+            }
+            /* 'outline' property is very similar to a border.*/
+            #text8 {
+                outline: 5px solid blue;
+            }
+        </style>
+        <p id="text1">Look at my borders.</p>
+        <p id="text2">Look at my borders.</p>
+        <p id="text3">Look at my borders.</p>
+        <p id="text4">Look at my borders.</p>
+        <p id="text5">Look at my borders.</p>
+        <p id="text6">Look at my borders.</p>
+        <p id="text7">Look at my borders.</p>
+        <br>
+        <p id="text8">Look at my borders.</p>
+        <p id="text9">Look at my borders.</p>
+    </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Formatting Tags</title>
+    </head>
+
+    <body>
+
+        <!-- The <abbr> is intended to specify an abbreviation. -->
+        <p style="font-size:30px"><abbr title="Buy One Get One free">BOGO</abbr> Hamburger Sale.</p>
+
+        <!-- The <address> is intended to specify the author/creator of the website/article. -->
+        <address>
+            Website by muon012
+            <br>
+            <a href="https://www.github.com/muon012">My git</a>
+        </address>
+
+        <hr>
+        <!-- The bidirectional override tag allows you to override text direction i.e. Hello > olleH -->
+        <!-- use the 'direction' attribute with value 'right to left' -->
+        <!-- Notice that a p tag can have the direction attribute but it won't change the order like a bdo tag -->
+        <p>I am right</p>
+        <p><bdo dir="rtl">I am right</bdo></p>
+        <p dir="rtl">This is not a bdo tag</p>
+        <hr>
+
+        <!-- The define tag is intended to define the meaning of a word. It just makes the text italic. -->
+        <p><dfn>Web Development</dfn> is writing code to create web pages.</p>
+
+        <!-- The keyboard tag is intended to display keyboard inputs -->
+        <p>Use the keyboard shortcut: <kbd>Cmd + V</kbd>, to paste something that you have copied.</p>
+
+        <!-- The sample output tag. It is similar to the keyboard tag as it changes the font style of a certain text. -->
+        <p>The computer printed: <samp>result=5</samp></p>
+
+        <!-- The <s> is very similar to the <del> -->
+        <p>HTML is a <s>programming</s> Mark-Up Language.</p>
+
+    </body>
+
+</html>

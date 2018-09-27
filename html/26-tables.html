@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Styling Tables</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            /* The catption has been put on the bottom.*/
+            caption {
+                background-color: yellow;
+                caption-side: bottom;
+            }
+            #table1, #table1 th, #table1 tr,  #table1 td {
+                height: 40px;
+                border: 1px solid;
+                text-align: center;
+                vertical-align: bottom;
+            }
+            .table2 {
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            /* Adding the 'table layout' of fixed will keep the columns/rows the same dimensions and will not allow
+            one of them to be bigger even if its content is more than the others. It will change all the columns/rows
+            accordingly so they keep the same size together. */
+            /* A value of 'auto' will take longer to display when the content is higher. */
+            #table2 {
+                width: 100%;
+                table-layout: fixed;
+            }
+            /* You can pass the value of 'n' to specify all rows. */
+            tr:nth-child(even):hover {
+                background-color: gray;
+            }
+            tr:nth-child(odd):hover {
+                background-color: red;
+            }
+
+        </style>
+
+        <!-- Table 1 -->
+        <table id="table1">
+            <caption>This is a table with a simple border.</caption>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                    <td>Cell 6</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Table 2 -->
+        <table class="table2" id="table2">
+            <caption>This is a table with 'border-collapse.'</caption>
+            <thead>
+                <tr class="table2">
+                    <th class="table2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In quae assumenda exercitationem! Alias fugiat soluta sapiente, quos iste quia illum hic dolorum tempore accusamus nesciunt? Rerum tenetur officiis a totam!
+                    Voluptatibus tenetur earum suscipit, maiores aspernatur error nulla, pariatur dolor provident sit, sed nihil iste. Rerum est in a ea quam dolorum nisi, assumenda eligendi quas culpa sequi fuga molestiae?
+                    Sed earum voluptatum quisquam? Mollitia deserunt, voluptatem qui esse sequi facilis officiis dicta fuga debitis voluptatum expedita. Accusantium reprehenderit iusto necessitatibus. Molestias distinctio exercitationem doloremque soluta sunt reprehenderit esse explicabo.
+                    Est, expedita repellendus et culpa debitis molestias sit aliquid magnam, corporis ut dignissimos. Officiis, quae exercitationem doloremque quidem eaque, expedita ab laudantium veniam eius inventore obcaecati aliquam dolores iure enim.
+                    Veritatis doloremque repudiandae dolor omnis, repellendus facilis obcaecati culpa cumque velit molestias. At ipsa suscipit, nemo architecto iusto exercitationem veniam illo. Dolor vitae quam, non maiores quo a reiciendis accusamus?
+                    Ut atque officia veniam dolor ipsum quisquam similique deleniti facilis, nobis recusandae eveniet libero laudantium nemo hic impedit? Quisquam totam veritatis expedita explicabo beatae eaque nemo ab assumenda eius necessitatibus.
+                    Atque sapiente at dignissimos vero iste numquam cum repudiandae dolorem odit sunt commodi corporis corrupti ut aspernatur, consequatur quae officiis eum voluptate deleniti autem, saepe ipsa! Vitae laudantium earum deleniti?
+                    Ducimus cupiditate, blanditiis nostrum iure aspernatur minima quo accusamus provident impedit unde aut tempora eos. Aperiam ipsam odit eaque. Commodi accusantium voluptatibus explicabo debitis officiis hic magni itaque possimus. Minus!
+                    Ex vero earum maiores, eveniet architecto odit ea reiciendis officiis vitae libero iste eligendi temporibus quidem, neque autem doloremque alias, iure repudiandae! Magnam perspiciatis dolorum assumenda esse totam obcaecati excepturi.
+                    Rem, repudiandae. Dicta veritatis praesentium totam sunt facere illum porro accusantium voluptatibus aliquam modi, quasi atque voluptas odit hic nihil doloremque omnis excepturi natus nesciunt nemo repudiandae laboriosam asperiores corporis!
+                    Dignissimos, porro? Magnam, amet! Molestias facilis incidunt quidem officiis voluptas quam fugit neque aliquid illum, eligendi ratione! Magnam in illum nisi natus inventore, voluptatum odit, ipsa, quibusdam esse odio laudantium!
+                    Aspernatur aliquam reprehenderit rem blanditiis accusamus ea dolorem ut optio maxime eos! Cum, at molestias. Assumenda, veritatis doloribus voluptates illum facere voluptatem magnam unde enim qui eaque ab asperiores debitis.
+                    Blanditiis laborum, ratione quaerat, voluptatum veniam ipsum voluptates voluptatem nihil laudantium unde corrupti illum. Dolore necessitatibus quis quo iste, laudantium delectus qui deserunt minus porro alias aliquid in iure iusto.
+                    Deleniti eum nobis repellendus? Eveniet, et. Perspiciatis harum quas necessitatibus eligendi obcaecati nisi? Amet quia, provident labore error quidem ratione illum, quod nesciunt accusamus saepe tenetur maxime, exercitationem aperiam quam!
+                    Voluptatem voluptas optio harum pariatur similique rem magni libero labore veniam exercitationem! Vero beatae quod nobis itaque in, molestiae sed fugiat. Suscipit autem repudiandae itaque tenetur ipsa magnam dicta possimus.</th>
+                    <th class="table2">Column 2</th>
+                    <th class="table2">Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table2">
+                    <td class="table2">Cell 1</td>
+                    <td class="table2">Cell 2</td>
+                    <td class="table2">Cell 3</td>
+                </tr>
+                <tr class="table2">
+                    <td class="table2">Cell 4</td>
+                    <td class="table2">Cell 5</td>
+                    <td class="table2">Cell 6</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </body>
+
+</html>

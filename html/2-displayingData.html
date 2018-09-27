@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Displaying Data</title>
+    </head>
+
+    <body>
+
+        <!-- Ordered lists -->
+        <!-- There are different types of ordered lists, default is 1; You can also choose A,a,I, or i -->
+        <!-- Here we use the type="I" for roman numbers -->
+        <!-- Emmet abbreviation: ol[type="I" style="color:red"]>li*3 -->
+        <ol type="I" style="color:red">
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Banana</li>
+        </ol>
+
+        <!-- Unordered lists -->
+        <!-- There are 4 types = disc(default), circle, square, none  -->
+        <ul type="square">
+            <li>Rock</li>
+            <li>Paper</li>
+            <li>Scissors</li>
+        </ul>
+
+        <!-- Description lists -->
+        <!-- Emmet abbreviation = dl>(dt{This is a "dt" element}dd{This a "dd" element}*3)*2 -->
+        <dl>
+            <dt>This is a "dt" element</dt>
+            <dd>This a "dd" element</dd>
+            <dd>This a "dd" element</dd>
+            <dd>This a "dd" element</dd>
+            <dt>This is a "dt" element</dt>
+            <dd>This a "dd" element</dd>
+            <dd>This a "dd" element</dd>
+            <dd>This a "dd" element</dd>
+        </dl>
+
+        <!-- You can even nest lists of different type -->
+        <!-- ol[type="A"]>li*2>ul[type="circle"]>li*3{Item $} -->
+        <ol type="A">
+            <li>
+                <ul type="circle">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </li>
+            <li>
+                <ul type="circle">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </li>
+        </ol>
+
+        <!-- Tables -->
+        <!-- "<th>" have "text-align:center" by default -->
+        <!-- Emmet: table>(caption{Table Caption})+(tr>th*3{Heading $})+(tr>td*3{Cell $})+tr>td*3{Cell $} -->
+        <table>
+            <caption>Table Caption</caption>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <!-- When using rowspan, the cell will expand downward, and the content of the 2 rows (the original row 
+        plus the new added row) will combine with this cell to form one big row.
+        For columnspan, the cell will expand to the right and the content of the 2 columns (the original column 
+        plus the new added column) will combine with this cell to form one big column. -->
+        <table>
+            <caption>Table Caption</caption>
+            <tr>
+                <th colspan="2" style="background-color:rgb(255, 230, 0)">Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+            </tr>
+            <tr>
+                <td style="background-color: red">Cell 1</td>
+                <td style="background-color: blue">Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <!-- Using "<thead>", "<tbody>", and "<tfoot>" -->
+        <!-- It is recommended to use these 2 tags to our tables to be able to style all the elements inside those tags. -->
+        <table>
+            <caption>Table Caption</caption>
+            <thead style="background-color:gray">
+                <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                </tr>
+            </thead>
+            <tbody style="background-color:lawngreen">
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot style="background-color:lightcoral">
+                <tr>
+                    <td>Footer cell 1</td>
+                    <td>Footer cell 2</td>
+                    <td>Footer cell 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </body>
+
+</html>

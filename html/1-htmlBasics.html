@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML Basics</title>
+    </head>
+
+    <body>
+        <video width="400" height="250" controls>
+            <source src="../thorin1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Adding more than one attribute to an element -->
+        <p style="color:red; font-size:10px">Hello world</p>
+
+        <!-- Boolean attributes do not need "=" sign -->
+        <!-- This line of code will not be visible due to the attribute "hidden" -->
+        <p hidden>Hi</p>
+
+        <!-- <pre> allows you to display text just as it is on your code -->
+        <pre>Hi earthlings,
+        this is your new master.
+              - General Mor -
+        </pre>
+
+        <!-- For quotes you can use <blockquote> or <q>, although the latter one displays quotation marks automatically -->
+        <q cite="www.nonexistingsite.com/stopreadingthiscode"><i> To be or not to be.</i></q>
+
+        <!-- Displaying exponents using superscipt tags -->
+        <p>2<sup>2 <sup>2</sup></sup> = 16</p>
+
+        <!-- Displaying chemical compounds using subscripts tags -->
+        <p>H<sub>2</sub>O</p>
+
+        <!-- To add a cross line on a word/letter we can use the deleted text tag -->
+        <p>This costs $ <del>40</del> 50</p>
+
+        <!-- Highlighted text, but only in a yellow color. -->
+        <p>He is the <mark>only</mark> person with a 4.0 GPA.</p>
+
+        <!-- Uderlining text using inserted text tag. -->
+        <p>I love the book: <ins>The Black House</ins>.</p>
+
+        <!-- Giving info about the link by hovering over it. -->
+        <a href="https://www.myspace.com" title="I'm so lonely =(">Do you remember me?</a>
+
+        <!-- Remember that anchor tags can have other elements inside it like an image -->
+        <a href="https://www.google.com/search?q=squirrel&tbm=isch"><img src="../squirrel.jpg" height="200" alt="picture of a squirrel"></a>
+
+        <!-- Using the map tag to specify a certain area (area tag) on a picture that is clickable;
+        You can inlcude multiple areas in one picture. -->
+        <h5>Find the secret link on the picture below:</h5>
+        <img src="../squirrel.jpg" alt="Squirrel" usemap="#squirrelMap" height="500" width="600">
+        <map name="squirrelMap">
+            <!-- Coordinates for a circle shape: (h, k, r); The origin is on the upper left corner of the picture;
+            Incresing values of x go to the right, increasing values of y go down. In this example:
+            The center (h,k) is 300 units right, then 190 units down from the origin and the radius (r) is 20 units. -->
+            <area shape="circle" coords="300, 190, 20" href="https://www.google.com/search?q=squirrel%27s+eyes&tbm=isch" alt="a squirrel again">
+        </map>
+        <br>
+
+        <!-- Creating a button -->
+        <!-- Autofocus attribute allows you to select the button by default. Pressing 'Enter' will click it. -->
+        <button type="button" onclick="alert('Hi user =)')" autofocus>Click me!</button>
+        <button type="button" onclick="alert('How?!!')" disabled>Sorry, I'm sick.</button>
+
+        <!-- When using onclick, we must use "this.attribute.attributeValue" -->
+        <!-- Notice that when specifying the value of the onclick attribute we need to camelCase instead of using the
+        dashes like in css. -->
+        <button type="button" onclick="this.style.backgroundColor = 'red'">I change color</button>
+
+        <!-- The onclick attribute is a global attribute so it can be used on any element. -->
+        <p onclick="this.style.color = 'green'">I also change color</p>
+
+        <!-- Adding some javascript to a button -->
+        <button onclick="clickEvent()">Greeting</button>
+
+        <!-- Aligning text. -->
+        <p style="text-align:center;">I'm on the middle of the page.</p>
+
+        <script>
+
+            // This is the code for the click event on the button with the text "Greeting";
+            var clickEvent = function(){
+                alert("How are you?")
+            }
+        </script>
+    </body>
+
+</html>

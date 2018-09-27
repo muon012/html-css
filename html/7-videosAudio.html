@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Videos/Audio in HTML</title>
+</head>
+<body>
+    
+    <video src="../thorin1.mp4" width="500" height="550" type="video/mp4" controls autoplay loop muted></video>
+
+    <!-- Poster attributes gives it an initial picture to display -->
+    <!-- Preload attribute lets the web page load the video when the page is loaded or wait until the 
+        user clicks on the video to load the video. -->
+    <!-- The p tag will only show if the video fails to load -->
+    <video src="../thorin1.mp4" width="500" height="550" type="video/mp4" controls poster="../squirrel.jpg" loop preload="auto">
+    <p>Problem displaying video</p>
+    </video>
+
+    <!--Youtube videos using iframe tags and attributes as query string parameters -->
+    <!-- Values of 1 are like True booleans or active, values of 0 mean the feature is off -->
+    <!-- Changing controls=0 will remove the controls from the video. Default is controls=1 -->
+    <!-- Here we added a playlist to the video,controls, and autoplay -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QybEnqg7bbM?autoplay=1&controls=1&loop=1&playlist=_EeYxtAeaX4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <!-- Audio tags have the same attributes as video tags -->
+    <audio src="../doom.mp3" controls autoplay loop></audio>
+
+</body>
+</html>

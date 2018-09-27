@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clipping and Masking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <style>
+        #image1{
+            clip-path: circle();
+        }
+        #image2{
+            clip-path: ellipse();
+        }
+        /* Clipping 60px from all sides */
+        #image3{
+            clip-path: inset(60px);
+        }
+        /* The 'polygon' value can have 3 or more points, these points represent the vertices. */
+        /* Remember that the points are: x y, x1 y2, x3 y3, xn yn */
+        #image4{
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+        }
+        #image5{
+            clip-path: circle();
+        }
+    
+    </style>
+
+    <img src="../squirrel.jpg" id="image1" alt="s1">
+    <img src="../squirrel.jpg" id="image2" alt="s1">
+    <img src="../squirrel.jpg" id="image3" alt="s1">
+    <img src="../squirrel.jpg" id="image4" alt="s1">
+    <img src="../squirrel.jpg" id="image5" alt="s1">
+
+
+</body>
+</html>

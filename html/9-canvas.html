@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Canvas in HTML</title>
+    </head>
+
+    <body>
+        
+        <!-- With "<svg>" you can directly embed images and text on html, but with "<canvas>" you need to use some js; -->
+        <!-- Canvas lose image quality as you scale them up, but svg do not. -->
+        <!-- Canvas is good for games and animations, svg is good for rendering static images to the webpage. -->
+
+        <canvas width="600" height="450" id="canvas1" style="border:1px solid red"></canvas>
+        <canvas width="600" height="450" id="canvas2" style="border:1px solid blue"></canvas>
+        <canvas width="400" height="400" id="canvas3" style="border:1px solid green"></canvas>
+        <canvas width="500" height="500" id="canvas4" style="border:1px solid black"></canvas>
+        <canvas width="500" height="500" id="canvas5" style="border:1px solid yellow"></canvas>
+        <canvas width="500" height="500" id="canvas6" style="border:1px solid purple"></canvas>
+
+        <script>
+            // First canvas
+            var canvas = document.getElementById("canvas1");
+            var context = canvas.getContext("2d");
+            var image = new Image();
+            image.src = "../squirrel.jpg";
+            image.onload = function () {
+                context.drawImage(image, 0, 0)
+            }
+
+            // Second canvas
+            var canvas2 = document.getElementById("canvas2");
+            var context2 = canvas2.getContext("2d");
+            var text = "Toto";
+            context2.font = "30px Times New Roman";
+            context2.fillText(text, 300, 250); // Around the center of the canvas;
+
+            // Third canvas
+            var canvas3 = document.getElementById("canvas3");
+            var context3 = canvas3.getContext("2d");
+            context3.fillRect(0, 0, 100, 100); // (x1, y1, x2, y2) from the canvas position not the webapage's origin;
+
+            // Fourth canvas
+            var canvas4 = document.getElementById("canvas4");
+            var context4 = canvas4.getContext("2d");
+            var gradient = context4.createLinearGradient(0, 0, 0, 300); // Horizontal gradient;
+            gradient.addColorStop(0, "red"); // The 0 represents that this will be the starting color (top side);
+            gradient.addColorStop(1, "black"); // The 1 represents that this will be the color at the end (bottom side);
+            context4.fillStyle = gradient;
+            context4.fillRect(0, 0, 400, 400); // Coordinates for the rectangle are from the origin of the canvas;
+
+            // Fifth canvas
+            var canvas5 = document.getElementById("canvas5");
+            var context5 = canvas5.getContext("2d");
+            var gradient2 = context5.createLinearGradient(0, 0, 200, 0); // Vertical gradient;
+            gradient2.addColorStop(0, "blue");
+            gradient2.addColorStop(1, "yellow");
+            context5.fillStyle = gradient2;
+            context5.fillRect(0, 0, 400, 400);
+
+            // Sixth canvas
+            var canvas6 = document.getElementById("canvas6");
+            var context6 = canvas6.getContext("2d");
+            var gradient3 = context6.createLinearGradient(0, 0, 200, 200); // Diagonal Gradient;
+            gradient3.addColorStop(0, "yellow");
+            gradient3.addColorStop(1, "blue");
+            context6.fillStyle = gradient3;
+            context6.fillRect(0, 0, 400, 400);
+        </script>
+    </body>
+
+</html>

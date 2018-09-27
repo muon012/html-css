@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Images in HTML</title>
+</head>
+<body>
+    <style>
+
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+    
+    </style>
+
+    <img src="../squirrel.jpg" text="Hi there!" alt="this is a squirrel">
+    <p>This is some text</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- We can use the figure tag as a div tag in the sense that anything in it will be enclosed by it. -->
+    <figure>
+        <img src="../squirrel.jpg" title="I'm inside a figure tag" alt="squirrel">
+        <figcaption>This is a figure caption.</figcaption>
+    </figure>
+
+    <!-- Using the picture as a background for some text -->
+    <p style="background-image:url('https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png')">
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+    How many lines can you count?
+</p>
+
+<br>
+
+<!-- The picture tag allows you to use several source tags which can display an image according to the size of the
+browser. The media attribute lets you decide the size of the browser for which the image will appear. -->
+<!-- Make sure you list the highest min-width first and then the others in descending order. -->
+
+<picture>
+    <source media="(min-width:1300px)" srcset="https://photofeathers.files.wordpress.com/2010/12/img_2039.jpg">
+    <source media="(min-width:800px)" srcset="http://www.wbfarmstore.net/wp-content/uploads/2016/12/ChickWithEgg_Dollar62115459.jpg">
+    <source media="(min-width:300px)" srcset="https://chefsnightout.files.wordpress.com/2010/02/egg.jpg">
+
+    <img src="../squirrel.jpg" alt="squirrel">
+</picture>
+
+</body>
+</html>

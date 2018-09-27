@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Colors in CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            #coloring1 {
+            width: 500px;
+            border: 1px;
+            border-right-style:dashed;
+            border-right-color: green;
+        }
+        #coloring2 {
+            column-count: 2;
+            column-rule-style:dotted;
+            column-rule-color: red;
+        }
+        #coloring3 {
+            caret-color: red;
+        }
+        /* If the hex value for the color has repeating numbers, you can condense such value into a three value color.
+        You can also add an alpha value at the end. */
+        #coloring4 {
+            color: #0f0;
+        }
+        /* The 'hwb' takes 4 parameters (3 are mandatory., hue value (0-360), whiteness in pecercent,
+        and blackness is percent. */
+        /* hwb is not supported in html. */
+        #coloring5 {
+            color: hwb(22, 0%, 0%);
+        }
+        /* The 'filter' property has a default value of 'saturate(100%)' or 'saturate(1)'. */
+        /* You can also pass a 'brightness()', 'grayscale()', value to filter as percentages. */
+
+        #coloring6 {
+            filter: saturate(50%);
+        }
+        #coloring7 {
+            filter: saturate(200%);
+        }
+        #coloring8 {
+            opacity: 0.5;
+        }
+        #coloring9 {
+            filter: drop-shadow(10px 5px 1px gray);
+        }
+        #coloring10 {
+            filter: hue-rotate(270deg);
+        }
+        #coloring11 {
+            filter: invert(100%);
+        }
+        #coloring12 {
+            filter: sepia(80%);
+        }
+        #coloring13 {
+            filter: brightness(20%) invert(100%) hue-rotate(300deg);
+        }
+    </style>
+
+        <p id="coloring1">Look at the right border of my element.</p>
+        <p id="coloring2">This is a two column paragraph tag.This is a two column paragraph tag.This is a two column
+            paragraph tag.This is a two column paragraph tag.This is a two column paragraph tag.This is a two column
+            paragraph tag.This is a two column paragraph tag.This is a two column paragraph tag.This is a two column
+            paragraph tag.This is a two column paragraph tag.</p>
+        <input type="text" id="coloring3" value="check my caret color!!">
+        <p id="coloring4">You can color me.</p>
+        <p id="coloring5">No hwb support on html.</p>
+        <img src="../JustOpened.png" id="coloring6">
+        <img src="../JustOpened.png" id="coloring7">
+        <p id="coloring8">I have opacity of .5</p>
+        <p id="coloring9">Look at my shadow.</p>
+        <img src="../JustOpened.png" id="coloring10">
+        <img src="../JustOpened.png" id="coloring11">
+        <img src="../JustOpened.png" id="coloring12">
+        <img src="../JustOpened.png" id="coloring13">
+
+    </body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colors in HTML</title>
+</head>
+<body>
+    <style>
+        #paragraph1 {
+            color: rgb(0, 255, 0);
+        }
+        /* Alplha values [0.0, 1.0] the closer the value is to 0, the more transparent the color will be*/
+        #paragraph2 {
+            color: rgba(0, 255, 0, .5);
+        }
+        /* Hex values range from 00 to ff;
+        The meaning of the 6 numbers is rrggbb, with rr=red, gg=green, bb=blue.*/
+        #paragraph3 {
+            color: #ff00ff;
+        }
+        /* Alplha values here range from 00-ff.*/
+        #paragraph4 {
+            color: #ff00ff80;
+        }
+        /* hsl values;
+        h=hue (color value)
+        s=saturation (in percent)
+        l=lightness (0-100%, with 100 being very white) */
+        #paragraph5 {
+            color: hsl(0, 100%, 30%);
+        }
+        #paragraph6 {
+            color: hsla(0, 100%, 30%, .4);
+        }
+    </style>
+
+    <p id="paragraph1">Color in rgb</p>
+    <p id="paragraph2">Color in rgba</p>
+    <p id="paragraph3">Color in hex values(hexadecimal)</p>
+    <p id="paragraph4">Color in hex values with alpha</p>
+    <p id="paragraph5">Color in hsl</p>
+    <p id="paragraph6">Color in hsla</p>
+
+</body>
+</html>

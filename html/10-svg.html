@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Scalable Verctor Graphics</title>
+    </head>
+
+    <body>
+
+        <!-- With "<svg>" you can directly embed images and text on html, but with "<canvas>" you need to use some js; -->
+        <!-- Canvas lose image quality as you scale them up, but svg do not. -->
+        <!-- Canvas is good for games and animations, svg is good for rendering static images to the webpage. -->
+
+        <!-- Remeber that the coordinates (width, height, cx, cy, x, y) inisde the <rect>, <circle>, <text> are
+            based on the origin of the <svg> not the webpage. -->
+        
+        <!-- A rectangle shape -->
+        <svg width="300" height="300" style="border:1px solid black">
+            <rect width="200" height="150" fill="beige"></rect>
+        </svg>
+
+        <!-- A circle shape -->
+        <svg width="300" height="300" style="border:1px solid black">
+            <circle cx="150" cy="150" r="50" fill="red"></circle>
+        </svg>
+
+        <!-- Text -->
+        <svg width="300" height="300" style="border:1px solid black">
+            <text x="100" y="100" font-size="30" font-family="Arial" fill="blue">Hi There</text>
+        </svg>
+
+
+    </body>
+
+</html>
