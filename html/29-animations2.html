@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Animations 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <style>
+        /* You can also animate margin, padding, text, font, word/letter-spacing */
+        @keyframes rainbow {
+            0%{background-color: red;}
+            15%{background-color: orange;}
+            30%{background-color: yellow;}
+            45%{background-color: green;}
+            60%{background-color: blue;}
+            75%{background-color: indigo;}
+            90%{background-color: violet;}
+            110%{background-color: purple;}
+        }
+        @keyframes icon {
+            from{background-position: top left;}
+            to{background-position: bottom right;}
+        }
+        @keyframes border {
+            50%{border-top-right-radius: 150px; border-color: yellowgreen;}
+            50%{border-top-left-radius: 150px; border-color: yellowgreen;}
+            50%{border-bottom-right-radius: 150px; border-color: yellowgreen;}
+            50%{border-bottom-left-radius: 150px; border-color: yellowgreen;}
+
+        }
+        @keyframes column {
+            from{column-count: 1;}
+            to{column-count: 5;}
+        }
+        @keyframes text {
+            from{font-size: 5vh;}
+            to{font-size: 20vh;}
+        }
+        #container1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: rainbow 5s infinite;
+            animation-delay: .75s;
+        }
+        #container1 {
+            width: 200px;
+            height: 200px;
+            background-image: url("../icon.png");
+            animation: icon 5s infinite;
+            animation-delay: .75s;
+        }
+        #container2 {
+            width: 200px;
+            height: 200px;
+            background-image: url("../icon.png");
+            background-size: 50% 50%;
+            animation: icon 5s infinite;
+            animation-delay: .75s;
+        }
+        #container3 {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            animation: border 3s infinite;
+        }
+        #container4 {
+            width: 200px;
+            height: 200px;
+            column-count: 1;
+            animation: column 3s infinite;
+        }
+        #container5 {
+            width: 200px;
+            height: 200px;
+            animation: text 3s infinite;
+        }
+    </style>
+    <div id="container1"></div>
+    <hr>
+    <div id="container2"></div>
+    <hr>
+    <div id="container3"></div>
+    <hr>
+    <div id="container4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, maiores fugit. Voluptatum corporis ex ipsum officiis adipisci quos non? Nisi, necessitatibus aperiam rem quo quos eligendi illum commodi accusamus praesentium.
+    Fuga tempore ipsum accusantium voluptates, ut veritatis odit cumque vel laudantium asperiores repudiandae dignissimos temporibus optio amet libero fugiat, aliquid doloribus aperiam neque repellendus. Ad eveniet est laboriosam dolor reiciendis!
+    Nemo nihil voluptates ut corporis quam nobis voluptate eum non perspiciatis obcaecati. Quisquam aliquid expedita, aliquam recusandae dolorum impedit repellat, voluptates harum sequi obcaecati dolore minus magni! Nam, quidem laborum.
+    Facilis quos hic, numquam impedit libero, tempore delectus doloribus quod quidem autem cum commodi facere aliquam, fugiat suscipit expedita dicta. Explicabo rem dolor temporibus ratione mollitia? Quae corrupti deleniti alias.
+    Fugit hic facere corporis voluptas a. Enim, molestiae veniam accusantium esse laboriosam illo ullam maiores recusandae, beatae hic laborum harum voluptatem sequi quisquam dicta, amet dolores officia animi iusto. Excepturi.
+    Repudiandae aliquid repellendus ab voluptatem inventore atque quia porro sapiente quasi veritatis saepe consectetur minus consequatur ratione voluptatum minima quod at asperiores reiciendis praesentium, odit quaerat numquam ipsa? Nulla, minus?
+    Distinctio debitis quaerat unde illum voluptas consequatur? Sint libero error illo molestiae minima asperiores similique nam tenetur itaque officiis, vero placeat doloribus facere maxime expedita quae quis! Totam, error enim?
+    Non facere nemo quasi dolore quia neque quam ducimus fugit odit atque sed in pariatur iste quis rerum, qui excepturi! Culpa, iste! Non cum quas et error, dolores perspiciatis eius?
+    Maiores asperiores, sapiente cupiditate nihil quo velit nostrum. Eos hic consectetur impedit culpa vel, alias blanditiis illum. Nesciunt eius mollitia deserunt. Natus, quaerat accusamus mollitia voluptas magnam impedit a cupiditate?
+    Veniam quaerat nulla sed ipsa, sequi officiis accusantium sit beatae impedit fugit repudiandae, in amet harum commodi nihil expedita nemo quos ad fuga. Eveniet soluta quaerat, quos minus magnam facere?
+    Molestiae ducimus provident aliquam reiciendis eligendi corporis voluptas vitae magnam nulla assumenda ea aut numquam rem quo odio aliquid excepturi saepe, ad, quod expedita quos alias a quam? Blanditiis, aperiam.
+    Labore neque commodi sint magni, possimus cupiditate corrupti autem? Rerum tempore consequuntur aliquid laborum! Sed doloremque ullam aut iure inventore molestiae a quasi facere minus, libero odit laboriosam, ipsam dignissimos?
+    Rem, maxime nobis quis nihil ratione, laudantium consequuntur accusantium quia commodi ut assumenda tenetur excepturi. Mollitia culpa deserunt, repudiandae atque ut reiciendis ea veritatis sed, exercitationem incidunt tenetur rem dolor?
+    Tempore possimus animi quod dolorum eaque. Quo incidunt nesciunt deleniti perferendis vero libero debitis? Omnis assumenda incidunt iure saepe ducimus a vel. Beatae voluptates reiciendis qui illum minima aliquid non?
+    Est quasi illum iste cumque deserunt tenetur culpa dolor, incidunt ea aut neque nemo odio laudantium nulla praesentium quibusdam? Nemo repudiandae obcaecati quidem architecto quos, distinctio deleniti dolores iste maxime.</div>
+    <hr>
+    <div id="container5">Hello World!</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blend Modes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            div {
+                width: 500px;
+                height: 500px;
+                background-image: url("../slice1.png"), url("../icon.png");
+                background-repeat: no-repeat, no-repeat;
+                background-blend-mode: hard-light;
+            }
+            div:first-of-type {
+                width: 500px;
+                height: 500px;
+                background-image: url("../icon.png"), url("../slice1.png");
+                background-repeat: no-repeat, no-repeat;
+                background-blend-mode: normal;
+            }
+            div:last-of-type {
+                width: 500px;
+                height: 500px;
+                background-image: url("../slice1.png"), url("../icon.png");
+                background-repeat: no-repeat, no-repeat;
+                background-blend-mode: normal;
+            }
+            p {
+                position: fixed;
+                bottom: 50%;
+                right: 0;
+            }
+        </style>
+        <div></div>
+        <div></div>
+        <div></div>
+        <p>You can blend images with the 'background-blend-mode' property.</p>
+    </body>
+
+</html>

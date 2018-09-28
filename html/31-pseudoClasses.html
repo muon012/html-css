@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pseudo Classes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            /* If you want to target elements with a certain attribute use this: */
+        [title] {
+            color: blue;
+        }
+        [title=att2] {
+            color: red;
+        }
+
+        /* Pseudo-Classes */
+
+        #input2:enabled, #input3:enabled {
+            background-color: peachpuff;
+        }
+        /* if the input is invalid, like a bad email address, then the background will change color until the
+         input is valid. */
+         /* You can also use 'valid' as the pseudo-class */
+        input:invalid {
+            background-color: red;
+        }
+        /* Target the first input element with the following pseudo-class */
+        /* Other values could be 'last-of-type', 'nth-of-type(n)' */
+        /* You can also use "child" instead of "type" */
+        input:first-of-type {
+            background: purple;
+        }
+        input:nth-of-type(8) {
+            background: pink;
+        }
+        /* this selector is effective when the element is the only child of its type. If there are more elements with
+        the same type, they are the same element type, then this code will not affect anything. */
+        input:only-of-type {
+            background: yellow;
+        }
+
+        /* pseudo elements */
+        #text3::before {
+            content:"---"
+        }
+        #text4::after {
+            content:"---"
+        }
+        #text4::first-letter {
+            color: red;
+        }
+        #text5::first-line {
+            color: blue;
+        }
+        /* cool selection styling */
+        p::selection {
+            color: darkorange;
+        }
+    </style>
+        <p id="text1" title="Hello">I have a 'title' attribute.</p>
+        <p id="text2" title="att2">Check my code.</p>
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+        <input type="text" id="input3">
+        <input type="email" id="input4">
+        <input type="email" id="input5">
+        <input type="text" id="input6" disabled>
+        <input type="text" id="input7" disabled>
+        <input type="text" id="input8">
+        <input type="text" id="input9">
+        <p id="text3">Hi there</p>
+        <p id="text4">Hello there</p>
+        <p id="text5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum consequuntur dicta amet blanditiis nam voluptas illo hic tenetur itaque, velit autem ullam recusandae vel maxime, necessitatibus nisi ducimus. Veritatis, voluptatum!</p>
+        <p id="text6"></p>
+        <p id="text7"></p>
+        <p id="text8"></p>
+        <p id="text9"></p>
+    </body>
+
+</html>

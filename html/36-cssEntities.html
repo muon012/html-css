@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Entities</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+            /* CSS Entities use the format '\####', a combination of letters and numbers.*/
+
+            /* Ying-yang */
+            #text1::before {
+                content: "\262F";
+            }
+            #text2::before {
+                content: "\2665";
+                color: red;
+            }
+            #text3::before {
+                content: "\2660\2663\2665\2666";
+                color: yellowgreen;
+            }
+            /* Creating a cool list */
+            li::before {
+                content: "\2714";
+            }
+            li {
+                list-style-type: none;
+            }
+        </style>
+        <p id="text1">Text example.</p>
+        <p id="text2">Text example.</p>
+        <p id="text3">Text example.</p>
+        <p id="text4">Text example.</p>
+        <p id="text5">Text example.</p>
+        <p id="text6">Text example.</p>
+        <p id="text7">Text example.</p>
+        <p id="text8">Text example.</p>
+        <p id="text9">Text example.</p>
+        <ul>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+        </ul>
+    </body>
+
+</html>
