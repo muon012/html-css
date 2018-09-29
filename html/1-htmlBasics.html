@@ -53,12 +53,13 @@
         <!-- Using the map tag to specify a certain area (area tag) on a picture that is clickable;
         You can inlcude multiple areas in one picture. -->
         <h5>Find the secret link on the picture below:</h5>
-        <img src="../squirrel.jpg" alt="Squirrel" usemap="#squirrelMap" height="500" width="600">
+        <img src="../squirrel.jpg" alt="Squirrel" title="find me" usemap="#squirrelMap" height="500" width="600">
         <map name="squirrelMap">
             <!-- Coordinates for a circle shape: (h, k, r); The origin is on the upper left corner of the picture;
             Incresing values of x go to the right, increasing values of y go down. In this example:
             The center (h,k) is 300 units right, then 190 units down from the origin and the radius (r) is 20 units. -->
-            <area shape="circle" coords="300, 190, 20" href="https://www.google.com/search?q=squirrel%27s+eyes&tbm=isch" alt="a squirrel again">
+            <area shape="circle" coords="300, 190, 20" href="https://www.google.com/search?q=squirrel%27s+eyes&tbm=isch"
+                alt="a squirrel again">
         </map>
         <br>
 
@@ -84,7 +85,7 @@
         <script>
 
             // This is the code for the click event on the button with the text "Greeting";
-            var clickEvent = function(){
+            var clickEvent = function () {
                 alert("How are you?")
             }
         </script>

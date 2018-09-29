@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Interesting Web Design Elements</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <style>
+        /* Transitions */
+
+        /* Using the 'transition' property allows you specify the time (in seconds) a property must change. */
+        /* This property must be made before the new property is declared. */
+        /* You can also specify a delay for the transition to happen. */
+        /* 'transition-timing-function' allows for the speed of the animation to change. */
+        #container1 {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            transition: height 3s, background-color 3s;
+            /* transition-delay: 1s; */
+            transition-timing-function: ease;
+        }
+        #container1:hover {
+            height: 300px;
+            background-color: red;
+        }
+
+        /* Animations */
+
+        @keyframes animate1 {
+            from{background-color: yellow;}
+            to{background-color: blue;}
+        }
+        /* Animation using the 'transform' property. */
+        @keyframes animate2 {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+        @keyframes animate3 {
+            from{transform: translate(0px);}
+            to{transform: translate(1000px);}
+        }
+        @keyframes animate4 {
+            from{transform: scale(.1);}
+            to{transform: scale(1.0);}
+        }
+        @keyframes animate5 {
+            from{transform: skew(90deg);}
+            to{transform: skew(-90deg);}
+        }
+        @keyframes animate6 {
+            from{transform: rotateX(0deg);}
+            to{transform: rotateX(360deg);}
+        }
+        @keyframes animate7 {
+            from{transform: rotateY(0deg);}
+            to{transform: rotateY(360deg);}
+        }
+        @keyframes icon {
+            from{background-position: top left;}
+            to{background-position: bottom right;}
+        }
+        @keyframes border {
+            50%{border-top-right-radius: 150px; border-color: yellowgreen;}
+            50%{border-top-left-radius: 150px; border-color: yellowgreen;}
+            50%{border-bottom-right-radius: 150px; border-color: yellowgreen;}
+            50%{border-bottom-left-radius: 150px; border-color: yellowgreen;}
+
+        }
+        @keyframes pulse {
+            0%{transform: scale(1.0);}
+            20%{transform: scale(1.0);}
+            40%{transform: scale(1.0);}
+            50%{transform: scale(1.1);}
+            60%{transform: scale(1.0);}
+            80%{transform: scale(1.0);}
+        }
+        /* cool pulsating button */
+        #button5 {
+            background-image: url("../squirrel.jpg");
+            background-size: 100% 100%;
+            width: 50px;
+            height: 50px;
+            animation: pulse 1s infinite;
+        }
+        #container2 {
+            height: 200px;
+            width: 200px;
+            animation-name: animate1;
+            animation-duration:3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        #container3 {
+            height: 200px;
+            width: 200px;
+            animation-name: animate1;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-fill-mode:forwards;
+            animation-play-state: running;
+        }
+        /* 'animation' shorthand: name, duration, timing-function, delay, direction, fill-mode */
+        #container4 {
+            height: 200px;
+            width: 400px;
+            animation: animate1 3s ease 0s alternate forwards;
+        }
+        #container5 {
+            height: 200px;
+            width: 400px;
+            animation: animate1 3s ease 0s alternate none;
+        }
+        #container6 {
+            height: 100px;
+            width: 100px;
+            background-color: purple;
+            margin: 20px auto;
+            animation-name: animate2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #container7 {
+            height: 100px;
+            width: 200px;
+            background-color: peachpuff;
+            margin: 20px 0;
+            animation-name: animate3;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        #container8 {
+            height: 100px;
+            width: 200px;
+            margin: 20px auto;
+            background-color:aquamarine;
+            animation-name: animate4;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        #container9 {
+            height: 100px;
+            width: 200px;
+            margin: 20px auto;
+            background-color:deeppink;
+            animation-name: animate5;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        #container10 {
+            text-align: center;
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 20px auto;
+            background-color:yellowgreen;
+            animation-name: animate6;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        #container11 {
+            text-align: center;
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 20px auto;
+            background-color: orange;
+            animation-name: animate7;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            backface-visibility: hidden;
+        }
+        #containerZ {
+            width: 200px;
+            height: 200px;
+            background-image: url("../icon.png");
+            animation: icon 5s infinite;
+            animation-delay: .75s;
+        }
+        #containerX {
+            width: 200px;
+            height: 200px;
+            background-image: url("../icon.png");
+            background-size: 50% 50%;
+            animation: icon 5s infinite;
+            animation-delay: .75s;
+        }
+        #containerY {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            animation: border 3s infinite;
+        }
+
+        /* Gradient */
+
+        /* When no specifying 'to top' the gradient will go from top to bottom or 'to bottom'*/
+        /* We can also use 'to left' or 'to right'  */
+        #gradient1 {
+            height: 300px;
+            width: 300px;
+            background: linear-gradient(to top, red, blue);
+        }
+        /* making diagonal gradients. */
+        #gradient2 {
+            height: 300px;
+            width: 300px;
+            background: linear-gradient(to top right, red, blue);
+        }
+        #gradient3 {
+            height: 300px;
+            width: 300px;
+            background: linear-gradient(45deg, red, blue, black);
+        }
+        /* circular gradients */
+        #gradient4 {
+            height: 300px;
+            width: 300px;
+            background: radial-gradient(red, blue, black);
+        }
+
+            /* Styling for lines 186-238 (background images) */
+            #containerA {
+                width: 600px;
+                height: 500px;
+                background-image: url("../squirrel.jpg");
+                background-repeat: repeat-x;
+            }
+            #containerB {
+                width: 600px;
+                height: 600px;
+                background-image: url("../icon.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+            /* Values for the 'background-position' can range from left, center, center top, right bottom, 
+            or using pixels/percentages too with the first value being the x-value and the other the y-value. */
+            #containerC {
+                background-image: url("../icon.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: right top;
+            }
+            #image1{
+            clip-path: circle();
+            }
+            #image2{
+                clip-path: ellipse();
+            }
+            /* Clipping 60px from all sides */
+            #image3{
+                clip-path: inset(60px);
+            }
+            /* The 'polygon' value can have 3 or more points, these points represent the vertices. */
+            /* Remember that the points are: x y, x1 y2, x3 y3, xn yn */
+            #image4{
+                clip-path: polygon(0 0, 100% 0, 50% 50%);
+            }
+
+
+            /* CSS Entities use the format '\####', a combination of letters and numbers.*/
+
+            /* Ying-yang */
+            #text1::before {
+                content: "\262F";
+            }
+            #text2::before {
+                content: "\2665";
+                color: red;
+            }
+            #text3::before {
+                content: "\2660\2663\2665\2666";
+                color: yellowgreen;
+            }
+            /* Creating a cool list */
+            .coolList::before {
+                content: "\2714";
+            }
+            .coolList {
+                list-style-type: none;
+            }
+
+            /* POSITIONING!!! */
+            #position1 {
+                height: 200px;
+                width: 200px;
+                background: red;
+                position: static;
+                ;
+            }
+
+            #position2 {
+                height: 200px;
+                width: 200px;
+                background: blue;
+                position: relative;
+                left: 40px;
+            }
+
+            #position3 {
+                height: 200px;
+                width: 200px;
+                background: yellow;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+
+            #position4 {
+                height: 200px;
+                width: 200px;
+                background: greenyellow;
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+            }
+            #position5 {
+                height: 400px;
+                width: 500px;
+                background: peachpuff;
+                position: relative;
+            }
+            #position6 {
+                height: 200px;
+                width: 200px;
+                background: gray;
+                position: absolute;
+                top: 50px;
+                right: 0;
+            }
+            #position7{
+                height: 100px;
+                width: 100%;
+                background: lightskyblue;
+                position: sticky;
+                top: 0;
+            }
+        </style>
+
+
+        <hr>
+        <!-- <pre> allows you to display text just as it is on your code -->
+        <pre>
+        Hi earthlings,
+            this is your new master.
+                - General Mor -
+        </pre>
+
+        <!-- For quotes you can use <blockquote> or <q>, although the latter one displays quotation marks automatically -->
+        <q cite="www.nonexistingsite.com/stopreadingthiscode"><i> To be or not to be.</i></q>
+
+        <!-- Displaying exponents using superscipt tags -->
+        <p>2<sup>2 <sup>2</sup></sup> = 16</p>
+
+        <!-- Displaying chemical compounds using subscripts tags -->
+        <p>H<sub>2</sub>O</p>
+
+        <!-- To add a cross line on a word/letter we can use the deleted text tag -->
+        <p>This costs $ <del>40</del> 50</p>
+
+        <!-- Highlighted text, but only in a yellow color. -->
+        <p>He is the <mark>only</mark> person with a 4.0 GPA.</p>
+
+        <!-- Uderlining text using inserted text tag. -->
+        <p>I love the book: <ins>The Black House</ins>.</p>
+
+        <!-- Using the map tag to specify a certain area (area tag) on a picture that is clickable;
+        You can inlcude multiple areas in one picture. -->
+        <!-- The title attribute will display a text once the mouse is over the element. -->
+        <h5>Find the secret link on the picture below:</h5>
+        <img src="../squirrel.jpg" title="find me" alt="Squirrel" usemap="#squirrelMap" height="500" width="600">
+        <map name="squirrelMap">
+            <!-- Coordinates for a circle shape: (h, k, r); The origin is on the upper left corner of the picture;
+            Incresing values of x go to the right, increasing values of y go down. In this example:
+            The center (h,k) is 300 units right, then 190 units down from the origin and the radius (r) is 20 units. -->
+            <area shape="circle" coords="300, 190, 20" href="https://www.google.com/search?q=squirrel%27s+eyes&tbm=isch"
+                alt="a squirrel again">
+        </map>
+
+        <!-- When using onclick, we must use "this.attribute.attributeValue" -->
+        <!-- Notice that when specifying the value of the onclick attribute we need to camelCase instead of using the
+        dashes like in css. -->
+        <button type="button" onclick="this.style.backgroundColor = 'red'">I change color</button>
+
+
+        <!-- Ordered lists -->
+        <!-- There are different types of ordered lists, default is 1; You can also choose A,a,I, or i -->
+        <!-- Here we use the type="I" for roman numbers -->
+        <!-- Emmet abbreviation: ol[type="I" style="color:red"]>li*3 -->
+        <ol type="I" style="color:red">
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Banana</li>
+        </ol>
+
+        <!-- Using "<thead>", "<tbody>", and "<tfoot>" -->
+        <!-- It is recommended to use these 2 tags to our tables to be able to style all the elements inside those tags. -->
+        <table>
+            <caption>Table Caption</caption>
+            <thead style="background-color:gray">
+                <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                </tr>
+            </thead>
+            <tbody style="background-color:lawngreen">
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot style="background-color:lightcoral">
+                <tr>
+                    <td>Footer cell 1</td>
+                    <td>Footer cell 2</td>
+                    <td>Footer cell 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Details tag allows to show/hide a summary tag that could be used specify additional details for your layout. -->
+        <details>
+            <summary>Click here to show details</summary>
+            <ol type="A">
+                <li>Fruit 1</li>
+                <li>Fruit 2</li>
+                <li>Fruit 3</li>
+            </ol>
+        </details>
+        <details>
+            <summary>Click here to show details</summary>
+            <ol type="A">
+                <li>Fruit 1</li>
+                <li>Fruit 2</li>
+                <li>Fruit 3</li>
+            </ol>
+        </details>
+
+        <!-- Different types of inputs: -->
+        <form action="">
+            Please Enter your name: &nbsp;<input type="text" name="" id="firstInput">
+            <br>
+            <input type="range">
+            <input type="checkbox">
+            <input type="radio">
+            <input type="file">
+            <input type="date">
+            <button type="reset">Reset Button</button>
+            <button type="button" onclick="func1()">Function Button</button>
+
+            <!-- "cols" in textarea tags mean the width of the element. -->
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+            <!-- Drop-down menu using the select tag; -->
+            <select name="" id="">
+                <option value="">Option 1</option>
+                <option value="" selected>I'm the default</option>
+                <option value="" disabled>You can't choose me</option>
+                <option value="">Option 4</option>
+            </select>
+        </form>
+
+        <!-- The keyboard tag is intended to display keyboard inputs -->
+        <p>Use the keyboard shortcut: <kbd>Cmd + V</kbd>, to paste something that you have copied.</p>
+
+        <!-- The bidirectional override tag allows you to override text direction i.e. Hello > olleH -->
+        <!-- use the 'direction' attribute with value 'right to left' -->
+        <!-- Notice that a p tag can have the direction attribute but it won't change the order like a bdo tag -->
+        <p>I am right</p>
+        <p><bdo dir="rtl">I am right</bdo></p>
+        <p dir="rtl">This is not a bdo tag</p>
+        <hr>
+
+        <!-- Showing a gauge bar -->
+        <meter value=".8"></meter>
+
+        <!-- Showing a progress bar -->
+        <progress value="20" max="400"></progress>
+
+        <!-- Background Images -->
+        <div id="containerA"></div>
+        <div id="containerB">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe dolore autem inventore ea
+            consectetur, a, omnis eveniet aspernatur cum consequatur, quam laudantium similique cumque nostrum totam
+            alias. Placeat, alias illo.
+            Neque recusandae impedit ullam quasi pariatur, accusantium molestias alias necessitatibus? Veniam sequi
+            facilis numquam, perspiciatis ut earum delectus obcaecati iure animi magni ex distinctio maxime ipsa
+            doloribus accusantium, quaerat repellat.
+            Provident quisquam quos ducimus, dolor minus fugiat rem eaque consequuntur adipisci nihil sequi totam,
+            dicta, ea veritatis similique ipsam aspernatur quasi! Iure harum voluptatem quod modi cupiditate facilis ut
+            fuga!
+            Quisquam impedit suscipit provident recusandae ut pariatur quasi unde iure hic! Tenetur placeat praesentium
+            enim nobis eligendi obcaecati impedit deleniti aperiam et voluptatibus corrupti, est delectus! Id
+            cupiditate similique tempora.
+            Hic explicabo ea pariatur, delectus cum eius cumque facilis, blanditiis voluptas quas iure minima in
+            molestias maxime dolores vero? Similique dolores quasi odio voluptatum ad perspiciatis, vitae eum iste
+            voluptatibus!
+            Dolorum nisi eius odit quam dolor! Fugit saepe nostrum in cum nisi a laboriosam quam et beatae delectus
+            dolor autem qui nemo asperiores, magnam non iste, omnis corrupti quibusdam numquam!
+            Dignissimos, fugiat. Vitae cuuptatem numquam possimus exercitationem eos veniam quia inventore perferendis
+            quasi. Ipsa alias quam deleniti cupiditate tenetur culpa beatae maxime tempore unde dicta. Hic, magni
+            earum.
+            Ut, nostrum velit provident doloremque quo earum ea, temporibus, sint odio dicta at asperiores? Consequatur
+            modi, quasi deleniti, quas necessitatibus eius laborum amet iste commodi laboriosam assumenda esse
+            reprehenderit aperiam!</div>
+        <hr>
+        <p id="containerC">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum error numquam repudiandae
+            veniam labore a sapiente harum. Similique accusantium animi reprehenderit illo eaque blanditiis quos omnis
+            nulla hic dolores? Reiciendis!
+            Asperiores nulla architecto, obcaecati a nam rem at consequuntur eligendi neque! Sapiente, incidunt
+            repudiandae magni et aliquam impedit accusamus facilis temporibus hic alias blanditiis vero quos recusandae
+            aspernatur molestiae delectus.
+            Voluptate molestiae dolor iusto eius. Facilis harum porro quam, ipsa maxime adipisci molestias obcaecati
+            dolore totam doloribus rerum sit aspernatur, aut soluta consectetur, nostrum fugit quaerat ab beatae illo
+            quas!
+            Magnam ad aut quam id! Ipsa perferendis assumenda inventore natus accusamus eum omnis veritatis sint, ullam
+            rem nulla quas ad et at cum corporis sequi! Sequi deserunt adipisci voluptates placeat.
+            Eaque adipisci eum consequatur neque quam laboriosam quod explicabo mollitia ab, cum nemo numquam sint vel
+            optio molestias temporibus tenetur libero odit ut porro minus facere! Blanditiis eum impedit sed?
+            Neque consectetur ad odit exercitationem quam corporis sit. Illum in repellat corrupti quos voluptatem,
+            fugit molestias at quia dolorem, accusamus pariatur autem laboriosam incidunt? Tempore quos aliquid maxime
+            commodi laborum!
+            Provident ullam nam, illum numquam expedita labore! Sint ipsum error soluta similique qui, ipsam illo
+            laborum praesentium nam? Rerum voluptate laborum quae placeat nostrum minus sed veniam recusandae odit
+            numquam!
+            Ab esse nemo commodi tempora aperiam consectetur porro quae molestiae cupiditate beatae, numquam adipisci
+            harum officiis voluptatem optio doloribus? Animi, recusandae eum omnis laudantium at est repudiandae
+            delectus voluptatum corporis!
+            Molestias sed id officiis? Minima, sed! Alias eius excepturi commodi repellendus voluptatem iusto quo eum
+            sint fugiat aspernatur expedita quos cupiditate in voluptate, labore eligendi vitae odio quidem mollitia
+            dolor!
+            Deleniti possimus quaerat soluta alias consectetur! Nihil eos rem tenetur itaque? Nemo nihil itaque,
+            necessitatibus repellendus sed at rerum saepe doloremque, vitae ducimus provident consequuntur aliquid,
+            unde minima. Quasi, provident?
+        </p>
+
+        <img src="../squirrel.jpg" id="image1" alt="s1">
+        <img src="../squirrel.jpg" id="image2" alt="s1">
+        <img src="../squirrel.jpg" id="image3" alt="s1">
+        <img src="../squirrel.jpg" id="image4" alt="s1">
+
+        <div id="container1"></div>
+        <hr>
+        <div id="container2"></div>
+        <hr>
+        <div id="container3"></div>
+        <hr>
+        <div id="container4"></div>
+        <hr>
+        <div id="container5"></div>
+        <hr>
+        <div id="container6"></div>
+        <hr>
+        <div id="container7"></div>
+        <hr>
+        <div id="container8"></div>
+        <hr>
+        <div id="container9"></div>
+        <hr>
+        <div id="container10">Rotation on the x-axis.</div>
+        <hr>
+        <div id="container11">Rotation on the y-axis.</div>
+
+        <div id="containerZ"></div>
+        <hr>
+        <div id="containerX"></div>
+        <hr>
+        <div id="containerY"></div>
+        <hr>
+        <button id="button5"></button>
+
+        <!-- Gradients -->
+        <div id="gradient1"></div>
+        <div id="gradient2"></div>
+        <div id="gradient3"></div>
+        <div id="gradient4"></div>
+
+        <!-- CSS Entities -->
+        <p id="text1">Text example.</p>
+        <p id="text2">Text example.</p>
+        <p id="text3">Text example.</p>
+        <ul class="coolUnordered">
+            <li class="coolList">Hi</li>
+            <li class="coolList">Hi</li>
+            <li class="coolList">Hi</li>
+            <li class="coolList">Hi</li>
+            <li class="coolList">Hi</li>
+        </ul>
+
+        <!-- POSITIONING!!!! -->
+        <div id="position1">position: static; <br> An element with position: static; is not positioned in any special
+            way; it is always positioned according to the normal flow of the page</div>
+        <div id="position2">position: relative; <br> left: 40px; <br> An element with position: relative; is
+            positioned relative to its normal position.</div>
+        <div id="position3">position: fixed; <br> bottom: 0; <br> right: 0;<br> An element with position: fixed; is
+            positioned relative to the viewport, which means it always stays in the same place even if the page is
+            scrolled. The top, right, bottom, and left properties are used to position the element.</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione ipsam consequuntur enim veniam molestias repellat libero cupiditate! Nostrum aspernatur autem delectus nihil, optio ipsum illum esse quod necessitatibus ratione?
+        Nesciunt provident saepe cupiditate? Amet est illum beatae asperiores in recusandae, quis doloribus alias nam ducimus quibusdam. Eos quas corrupti eligendi dicta quisquam? Explicabo magnam esse cupiditate, minima repellendus iusto.
+        Tempore, placeat beatae? Maxime ipsa laudantium quo amet, aperiam soluta, enim accusantium quaerat cupiditate voluptate laboriosam cumque modi ab cum numquam sint debitis autem! Nisi debitis fugit dignissimos eaque similique.
+        Alias id quo fugit! Architecto libero perferendis possimus ex cupiditate iure, placeat, facilis vero, magni ea quisquam consequuntur harum omnis! Est, asperiores qui non dolor quae mollitia consectetur esse explicabo?
+        Fuga praesentium odit optio quod quisquam reiciendis aliquam maxime. Culpa expedita, officia ut nihil sequi dolorem impedit, perspiciatis amet molestias minima deserunt quibusdam odio incidunt ad excepturi numquam non saepe?
+        Laudantium maiores necessitatibus enim beatae quas iusto quo perspiciatis consequatur ipsum, fugiat sint dolores ad quasi aperiam consequuntur assumenda explicabo magnam porro a recusandae accusamus quisquam, voluptatum rerum minima? Sequi.
+        Omnis perspiciatis consectetur velit nam sit necessitatibus, pariatur asperiores est praesentium sint exercitationem qui soluta repellendus, cum, sunt aperiam iure doloremque? Labore, voluptas illo blanditiis quaerat reprehenderit non perspiciatis cupiditate!
+        Cum earum facere doloribus unde libero corrupti quas dolorum! Eaque quod facilis inventore obcaecati voluptatum. Vitae, sunt. Sit nam hic placeat numquam iure modi. Voluptas ad quisquam ipsa est dolorum.
+        Nisi id nihil fugit officia facere eveniet debitis ipsa quae similique dolorem, reiciendis tempora illum ipsum deleniti non sed? Odit modi nulla quidem obcaecati nihil dolorem quis eos quod maxime!
+        Vitae quo, voluptate sunt laborum hic voluptatibus nulla. Animi sapiente in itaque similique iusto omnis, fuga molestias nostrum dolor vel unde exercitationem expedita cum eos incidunt. Libero sit maiores ipsa.
+        Omnis laboriosam pariatur ipsum quam porro quae nihil aliquam aut dolore quasi beatae, blanditiis rerum, doloribus qui quaerat facilis. Saepe inventore molestias nemo eius fuga amet eaque ipsa neque obcaecati.
+        Natus enim architecto quibusdam voluptates beatae accusamus, blanditiis quaerat suscipit quo assumenda veniam nemo ipsa obcaecati? Quasi animi qui officiis dignissimos eaque odit modi? Earum voluptas magnam soluta aut sequi?
+        Sapiente earum nobis soluta sit pariatur veniam obcaecati. Nisi magnam in eius excepturi dolorum exercitationem dicta at libero nobis debitis, nemo voluptate vitae quod? Similique, facilis? Recusandae vitae dolore maxime?
+        Soluta iure nisi quae aperiam explicabo itaque deserunt, maiores temporibus culpa voluptatum veniam ut. Consectetur eveniet ducimus aperiam voluptatum, explicabo non molestias! Maxime veniam eligendi, dolore fugiat corrupti reprehenderit iure.
+        Praesentium quam voluptates vero enim culpa velit est iste tenetur nobis numquam impedit, in ex illum qui quisquam doloremque debitis, ut rem cumque et deleniti quas corrupti. Iusto, in ab?
+        Amet nam neque quam fugiat et quibusdam, dignissimos consequuntur sapiente veritatis earum. Obcaecati sed reprehenderit aliquid. Commodi aut enim laboriosam! Unde, pariatur aliquid odit obcaecati quam sit eveniet numquam quod.
+        Ipsam veniam illo aliquam assumenda nemo accusamus nulla provident velit deleniti, vel incidunt obcaecati doloribus quisquam facere quibusdam quod voluptates, natus in et? Optio, excepturi molestias placeat explicabo fuga temporibus.
+        Accusantium laudantium quas numquam molestias commodi nesciunt totam. Repudiandae id repellat exercitationem modi sit vel deleniti, odio consequatur qui. Obcaecati, nobis? Itaque veniam perferendis vero quo ducimus, autem repellat quos.
+        Magni expedita nulla omnis et laborum cum facilis, repudiandae totam sequi nobis ex aspernatur aut officia dolore odio non quasi placeat eius ab perferendis commodi illum, quia laudantium? Ullam, expedita!
+        Voluptatibufuga adipisci dignissimos, fugiat ratione voluptatum at ea. Optio nulla ea officia. Autem quaerat odio, voluptates sunt dolore officiis impedit. Debitis, illo.
+        Aspernatur molestias fugiat ea numquam ipsum autem esse, quibusdam, illum perspiciatis molestiae cupiditate quam quas in quia reiciendis suscipit sapiente! Qui, dolore cumque. Expedita delectus libero rem incidunt aliquid reiciendis.
+        Enim eveniet nisi unde at. Fugit vel, recusandae maxime enim consequatur facilis odio dolorem? Incidunt, odio error? Provident atque ut quam voluptas? Culpa consequatur expedita adipisci aliquam iste ad sequi.
+        Expedita, voluptate voluptatum. Temporibus eligendi vero molestias eius quasi commodi ut quisquam perspiciatis obcaecati at, recusandae itaque, dolore illum facilis dolorum accusantium iusto pariatur ipsa aliquam quaerat. Blanditiis, perferendis earum?
+        Iure necessitatibus, quod quos ut alias, labore odio asperiores officia ad at eveniet distinctio cum debitis autem nobis modi vitae velit magnam maxime sit! Dicta magni maxime eius dolores praesentium.</p>
+        <div id="position4">position: absolute;<br>left: 0;<br>bottom: 20px;<br>This is an absolute positioned element
+            that has no positioned ancestors, it uses the document body, and moves along with page scrolling</div>
+        <div id="position5">position: relative;<br> This peach div contains the gray div inside.
+            <div id="position6">position: absolute;<br>top: 50px;<br>right: 0;<br>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport).</div>
+        </div>
+        <div id="position7">position: sticky;<br>top: 0;<br>An element with position: sticky; is positioned based on the user's scroll position.
+
+            A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).</div>
+        <div id="position8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat eaque consequatur ex repudiandae, possimus illo est deserunt alias, earum, suscipit unde fugit commodi. Non, tempore delectus in labore rerum quam!
+        Tempora unde sed in fuga commodi, velit, possimus enim illo reprehenderit ipsam saepe odit. Nihil et qui deleniti molestias quos cupiditate distinctio fugiat suscipit id corrupti, necessitatibus esse libero in?
+        Velit illum recusandae nisi numquam blanditiis eligendi molestiae accusantium amet molestias, vitae totam vel atque nihil fugiat dolorem, exercitationem consectetur id adipisci culpa veritatis rem, quidem deserunt commodi? Obcaecati, consequuntur!
+        Nobis ullam quos voluptate eum eius magnam id magni accusamus voluptas recusandae tenetur animi reiciendis qui, itaque quisquam commodi ab dolore modi? Similique aspernatur non reiciendis quidem animi odit corrupti!
+        Esse possimus dolor maxime totam quam eius accusamus architecto. Recusandae quia dicta molestias blanditiis sint eaque sapiente omnis animi at fuga in velit iure quidem ad, sequi exercitationem, nam quibusdam!
+        Ipsa dolor nesciunt nihil fugit ea facere inventore earum possimus placeat quod aliquam ratione labore velit sunt necessitatibus ipsum laborum, ipsam nobis maiores debitis recusandae enim! Itaque architecto veritatis suscipit!
+        Dolor unde dolorem sapiente officiis placeat earum consequatur consequuntur deserunt provident quis quas dignissimos asperiores eveniet laborum itaque iure, cupiditate, vitae numquam blanditiis quibusdam! Voluptates, error? Excepturi, unde. Laboriosam, voluptate.
+        Ex pariatur suscipit inventore quibusdam nemo velit unde ab illo? Molestiae ab, delectus adipisci impedit eligendi in, quia numquam et voluptatibus officiis expedita nemo sed, id ut minima porro enim.
+        Velit dicta cum fugiat voluptate consectetur blanditiis dolorem officiis voluptatibus itaque amet laudantium, rerum doloremque, debitis ea quasi inventore tempore tenetur minima ex dolorum iusto reprehenderit. Quod nemo neque facere?
+        Inventore nulla praesentium illum, repellendus adipisci perferendis ducimus saepe incidunt, possimus error, fugit tenetur eius! Earum neque deleniti illo nobis et in soluta, vero placeat magnam rem ad dignissimos nulla.
+        Impedit itaque ex maxime non ab! Error maxime amet harum quod unde deserunt deleniti, ratione iste voluptas quisquam alias nulla possimus accusantium, vero sint animi repellendus odit beatae veritatis vel.
+        Delectus hic veritatis quia amet ducimus ex alias vitae quam, voluptas perspiciatis dignissimos! Dolorem esse blanditiis repellat, vitae qui natus deserunt labore accusantium aperiam expedita, totam recusandae optio quisquam. Corporis.
+        Accusantium rerum eveniet, mollitia voluptate maxime rem blanditiis praesentium necessitatibus enim perspiciatis odio cumque excepturi repudiandae maiores at totam porro qui odit quos deleniti aut nam? Delectus distinctio eveniet quaerat.
+        Ex est debitis doloribus in, quia quibusdam explicabo repellat illo vel eligendi quod maxime nesciunt exercitationem rerum nam tempore blanditiis id. Non sint voluptates facilis quia nulla odio amet expedita.
+        Accusamus animi ut voluptatibus vel sed placeat minima quo earum sapiente officia quas, laboriosam fuga error itaque, ipsum porro iure voluptas deserunt, sint sequi blanditiis eveniet nihil dicta. Cupiditate, excepturi?
+        Molestiae asperiores in porro sit quos. Rem cum qui fugiat consequatur minus expedita corrupti, voluptate maxime culpa cupiditate sed veniam. Molestiae esse qui aliquam illo! Provident dignissimos totam a inventore?
+        Voluptas perferendis optio voluptatibus officia ex ducimus nihil minus fuga, debitis delectus alias nostrum qui culpa provident accusantium, expedita aspernatur error modi veritatis. Reprehenderit, saepe placeat quis repellendus qui voluptas?
+        Quaerat, vero! Porro tempore eligendi dolorum, in rem magnam numquam eaque, fugit temporibus ex reprehenderit. Quae, maiores. Rem ipsum laudantium hic iste, neque molestiae soluta excepturi consequatur quos illum nobis!
+        Excepturi rerum voluptates neque laudantium molestias porro laborum temporibus mollitia harum iure ducimus molestiae sed alias ratione quasi facere voluptatem totam aliquam, atque velit voluptatibus nisi saepe. Distinctio, labore ipsa!
+        Numquam, hic temporibus tempora laborum unde voluptas minus reprehenderit rem eos, fuga porro aut eius. Fugit temporibus id at labore dolor facilis illo quo minima illum fuga velit, eius odit.
+        Nihil velit inventore debitis corporis aliquam dolore delectus, ea quis reprehenderit neque doloribus itaque facilis nulla veniam ullam iusto earum id alias eius similique omnis hic suscipit pariatur. Illum, sint.
+        Harum sed architecto error necessitatibus, molestias iste, debitis quidem aliquid aut consequuntur fuga ducimus atque esse blanditiis nihil fugiat laudantium magnam hic velit ullam explicabo fugit. Excepturi doloremque adipisci officiis.
+        Asperiores accusantium autem ducimus, fugiat, eveniet velit dignissimos quisquam earum laborum nobis adipisci. Ratione amet laborum sed ea sunt, excepturi minus, dignissimos voluptatum mollitia, molestias facere facilis incidunt obcaecati sit.
+        Odit fugit placeat vero, exercitationem pariatur dicta fugiat minima aspernatur earum cupiditate nobis. Hic repudiandae cumque laudantium nesciunt sunt ducimus omnis. Aperiam cum esse possimus explicabo. Accusantium quas reprehenderit repudiandae?
+        Quam laudantium ut tempore quos provident fuga vel blanditiis, veritatis molestiae minus voluptatibus facere debitis sapiente dolor inventore numquam voluptatum deserunt aperiam mollitia non nihil eius corrupti sint expedita? Nostrum.
+        Accusamus sapiente, voluptatem obcaecati voluptates repellat nam quam, fugit hic reprehenderit voluptate qui assumenda sunt. Corporis fugit vitae similique recusandae id velit libero autem cupiditate necessitatibus, neque quos officiis atque.
+        Necessitatibus obcaecati ullam blanditiis accusamus itaque fugiat officia, nemo quas repudiandae ipsa! Quia hic voluptates aliquid temporibus! Quasi deleniti exercitationem at earum nemo maxime, dolor sit nobis repellat nesciunt mollitia.
+        Eum odio asperiores ut aliquid blanditiis explicabo in molestias autem possimus! Explicabo tenetur rem veniam magni animi aliquid eaque maiores quae quos. Modi nam ratione ipsa atque dolores praesentium quo!
+        Ut quis eaque, repudiandae eius impedit praesentium maxime consectetur doloribus minus debitis iusto temporibus voluptates repellat libero, quas atque. Voluptates numquam quos maiores assumenda quo cum quia molestiae distinctio corporis.
+        Voluptate fuga totam libero vel laborum rerum aspernatur! Maiores, minima illo voluptate laudantium rerum expedita ullam molestiae vitae. Ad numquam veritatis modi quo totam temporibus non ipsum deleniti enim. Accusantium.
+        Consectetur molestias, cupiditate atque perspiciatis id architecto velit, libero et optio recusandae veritatis eaque a, doll Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni quasi magnam sunt impedit quibusdam neque, amet quaerat provident eaque voluptatibus perspiciatis mollitia sint distinctio nisi quod quis, a accusamus aspernatur!
+        Nemo fugit mollitia doloremque similique dolorum necessitatibus optio. Quo facere accusantium consequuntur adipisci facilis explicabo distinctio velit beatae qui laudantium voluptatem dolorem, non nihil eaque atque sint repudiandae, iste vero.
+        Blanditiis provident inventore molestiae dolorem modi porro voluptatum esse error quaerat ipsa tenetur qui quae dolores nostrum assumenda natus odit, sequi sit id ex doloribus reiciendis repellendus laboriosam animi. Sit?
+        Vel veritatis excepturi aliquid omnis ipsum consequatur illum magnam debitis labore dicta laborum reprehenderit rerum velit fugit sint nemo unde repellat eum quidem praesentium, vitae nobis? Accusantium temporibus sed molestiae.
+        Iure ex aliquam maiores ipsum, dolores corporis nulla maxime pariatur magni minima voluptatibus cum dolore reprehenderit sequi a. Alias, id dolore illo veritatis consequuntur ut nam eligendi nihil nisi dignissimos.
+        Voluptatibus, deleniti! Sequi soluta voluptates deleniti dicta molestiae molestias itaque quae tempore assumenda labore laboriosam et, voluptatum fugit accusamus, voluptatibus vel ipsam quas tenetur, voluptate in. Distinctio assumenda sed praesentium?
+        Necessitatibus, quaerat, iste nihil, natus rem minima magnam provident explicabo amet molestias iure commodi distinctio sequi nulla hic cupiditate quibusdam? Corporis, laboriosam earum impedit fugit ipsam sint sequi iure. Vitae?
+        Saepe atque doloremque soluta incidunt nobis neque at expedita aperiam animi ad, perferendis vero suscipit necessitatibus ratione accusantium sint debitis quaerat quam aliquid, nostrum molestias. Pariatur aperiam dolorem suscipit rerum.
+        Provident nulla temporibus unde harum, dolores eos voluptas corrupti nobis. Repellat mollitia nobis qui, tempora eligendi quaerat sed esse facere labore ut, voluptatem corporis nesciunt possimus tempore. Velit, nostrum porro?
+        Officia praesentium vitae ab nostrum odit quis? Animi neque ratione nemo adipisci minus eum atque, dolore voluptatibus libero sit eveniet aliquid vitae blanditiis placeat vel eos iure repudiandae, inventore earum.
+        Debitis corporis quae maxime beatae rem placeat nisi quam perferendis voluptatem. Nobis similique facere pariatur at et eum voluptatem corrupti? Repudiandae, odit reprehenderit nemo porro laboriosam aspernatur ab delectus? Sapiente?
+        Dicta in itaque ex cupiditate tempore voluptatibus quasi. Iure aut temporibus facere. Fugit voluptas debitis, non, assumenda voluptatem quasi cumque ducimus veritatis, sint rerum pariatur porro! Velit illum et delectus?
+        Quisquam ea rerum nostrum quo expedita provident voluptatum animi in quis dolores, exercitationem suscipit labore vitae, numquam nesciunt sunt! Sunt animi soluta cumque voluptas dicta porro omnis qui, repudiandae laborum.
+        Totam et magni eos facilis obcaecati alias voluptas aliquam mollitia quas amet earum ullam labore nobis officia repellat pariatur odio quisquam aliquid repudiandae quibusdam illum, autem cumque assumenda! Tempore, iure?
+        Delectus, tempore. Necessitatibus officia obcaecati laborum animi quibusdam? Ducimus molestiae fugiat iure iste magni a, cupiditate eum modi vel deleniti, consequuntur repellat voluptas! Sapiente beatae mollitia ut aut suscipit distinctio!
+        Ullam eum nemo repudiandae unde dolorum rem corporis odit tempore aliquid dolore? Quod quae illo eius non iure unde. Error rerum recusandae corrupti ratione quaerat suscipit delectus alias aspernatur ad.
+        Magni animi accusamus aspernatur, nulla fugiat molestiae sit iusto distinctio perspiciatis porro consequuntur rem consequatur a dolorum accusantium expedita itaque cum enim quaerat? Placeat et eveniet quasi. Omnis, similique maiores!
+        Ad omnis aliquam atque cumque quibusdam? Veniam aut, soluta qui officiis vitae quod molestias reiciendis. Aliquid repudiandae, atque cupiditate distinctio corrupti esse a nobis repellat odio error eligendi aliquam sint?
+        Sit perferendis deleniti veniam vitae perspiciatis accusamus ipsum possimus labore recusandae minus aut voluptatibus enim sed cupiditate distinctio nobis hic quibusdam culpa aperiam fuga, nihil odit sint quaerat iusto. Facere!
+        Consequuntur enim officia sit delectus illo mollitia explicabo corrupti ipsam eius eligendi nihil excepturi consectetur quaerat itaque quasi id, soluta minima in nam odit fugit incidunt. Quidem iste accusamus maxime? orem voluptatem. Illum maxime animi voluptatibus tempora, corporis fuga tempore magnam voluptatem voluptates corrupti nisi!
+        Modi veritatis, nobis, consectetur quaerat magni asperiores nulla maxime iusto nostrum saepe voluptatem expedita praesentium ea ipsum cum iure illum consequatur. Eum inventore delectus veritatis qui facilis ullam culpa sed!
+        Quibusdam alias nostrum ipsam numquam rerum qui. Non eius minima iure id reiciendis? Repellat ipsam eius distinctio nesciunt magnam autem non, quae fugiat nisi, sunt quos at veniam ipsum quia.
+        Ab eum temporibus voluptatem nulla assumenda, nostrum blanditiis beatae itaque fugiat sequi delectus officiis iusto molestiae id laborum deserunt voluptas placeat quos saepe fugit quo nobis quaerat? Nostrum, minima illo.
+        Possimus mollitia, vitae tempora ut harum perferendis aspernatur sit distinctio. Fugiat dolorem sint velit aliquid architecto minus commodi quae voluptas tempore recusandae necessitatibus, maiores, provident voluptate soluta laborum perspiciatis libero.
+        Optio inventore delectus, a sint repudiandae, laudantium dolor enim perspiciatis porro voluptas fugiat error obcaecati officiis fuga non in. Accusamus voluptatibus ipsam ad, asperiores vel repellendus aliquam tempora minus dignissimos.
+        Nesciunt vel quisquam officia unde consequatur maxime rerum sed repellat, recusandae architecto laudantium. Odio, voluptatibus! Expedita in doloribus similique ipsum, pariatur recusandae animi, impedit cupiditate cum culpa, est assumenda magnam.
+        Unde sapiente debitis commodi magnam est accusantium ad recusandae impedit maiores voluptate doloribus eum ipsam magni voluptas, quas qui molestias ducimus ratione corporis eveniet esse. Quis dolor nulla doloremque omnis.
+        Cupiditate officia deserunt saepe delectus consequuntur temporibus rem nobis distinctio, nam maiores voluptates nulla ad sint placeat maxime labore dolor, quia iste itaque sit, mollitia vel quos? Non, quas eius?
+        Reiciendis cum illo corrupti consequatur fugit laboriosam delectus placeat animi rerum, ipsa odit atque eius saepe quo officiis non et quas, nulla blanditiis nobis vero! Sint voluptate omnis rerum quam!
+    </div>
+
+    </body>
+
+</html>
